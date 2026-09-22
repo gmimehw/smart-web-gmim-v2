@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal login admin GMIM Ebenhæzer Wulauan.">
+  <title>Login Admin | GMIM Ebenhæzer Wulauan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-card" aria-labelledby="login-title">
+      <div class="login-form-panel">
+      <a class="login-brand" href="index.html" aria-label="Kembali ke beranda GMIM Ebenhæzer Wulauan">
+        <span class="brand-mark"><img src="assets/logo-gmim.png" alt="Logo GMIM"></span>
+        <span class="brand-name"><strong>GMIM</strong><small>Ebenhæzer Wulauan</small></span>
+      </a>
+
+      <div class="login-intro">
+        <span class="login-kicker">Ruang pengelola</span>
+        <h1 id="login-title">Portal <em>Admin</em></h1>
+        <p>Kelola informasi jemaat dengan aman dan mudah.</p>
+      </div>
+
+      <form class="login-form" action="admin-dashboard.html" method="get">
+        <div class="field-group">
+          <label for="username">Username / Email</label>
+          <div class="input-wrap">
+            <span class="field-icon" aria-hidden="true">@</span>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="Masukkan username atau email" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="field-icon" aria-hidden="true">&#9679;</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Masukkan password" required>
+            <button class="password-toggle" type="button" aria-label="Tampilkan password" aria-pressed="false">Lihat</button>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-option"><input type="checkbox" name="remember"><span>Ingat saya</span></label>
+          <a href="mailto:halo@gmimebenhazer.id?subject=Reset%20Password%20Admin">Lupa password?</a>
+        </div>
+
+        <button class="login-button" type="submit">Masuk <span aria-hidden="true">&#8594;</span></button>
+      </form>
+
+      <a class="back-home" href="index.html"><span aria-hidden="true">&#8592;</span> Kembali ke Beranda</a>
+      <p class="login-footer">GMIM Ebenhæzer Wulauan <span>•</span> Portal internal</p>
+      </div>
+      <aside class="login-visual" aria-label="Foto gereja GMIM Ebenhæzer Wulauan">
+        <img src="assets/gereja-login.jpeg" alt="Gedung gereja GMIM Ebenhæzer Wulauan">
+        <div class="visual-caption"><span class="visual-line"></span><p>Tempat untuk melayani,<br><em>bertumbuh bersama.</em></p></div>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const passwordInput = document.querySelector('#password');
+    const passwordToggle = document.querySelector('.password-toggle');
+
+    passwordToggle.addEventListener('click', () => {
+      const isVisible = passwordInput.type === 'text';
+      passwordInput.type = isVisible ? 'password' : 'text';
+      passwordToggle.textContent = isVisible ? 'Lihat' : 'Sembunyikan';
+      passwordToggle.setAttribute('aria-label', isVisible ? 'Tampilkan password' : 'Sembunyikan password');
+      passwordToggle.setAttribute('aria-pressed', String(!isVisible));
+    });
+  </script>
+</body>
+</html>

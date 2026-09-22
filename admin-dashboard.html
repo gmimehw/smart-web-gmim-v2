@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Panel admin Sistem Informasi Jemaat GMIM Ebenhæzer Wulauan.">
+  <title>Dashboard Admin | GMIM Ebenhæzer Wulauan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a class="dashboard-brand" href="index.html"><span class="brand-mark"><img src="assets/logo-gmim.png" alt="Logo GMIM"></span><span><strong>GMIM</strong><small>Ebenhæzer Wulauan</small></span></a>
+        <button class="sidebar-close" type="button" aria-label="Tutup menu">×</button>
+      </div>
+      <nav class="side-nav" aria-label="Navigasi admin">
+        <p class="nav-label">Menu utama</p>
+        <a class="nav-item active" href="#dashboard" data-view="dashboard"><span class="nav-icon">⌂</span>Dashboard</a>
+        <a class="nav-item" href="#jemaat" data-view="jemaat"><span class="nav-icon">♧</span>Data Jemaat</a>
+        <a class="nav-item" href="#pelayan" data-view="pelayan"><span class="nav-icon">✦</span>Pelayan Khusus</a>
+        <p class="nav-label">Konten</p>
+        <a class="nav-item" href="index.html#galeri"><span class="nav-icon">▧</span>Galeri</a>
+        <a class="nav-item" href="#pengaturan" data-view="pengaturan"><span class="nav-icon">⚙</span>Pengaturan</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="profile-mini"><span class="avatar">AD</span><span><strong>Admin Gereja</strong><small>Administrator</small></span></div><a class="logout-link" href="admin-login.html">Keluar <span>↗</span></a></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><button class="menu-open" type="button" aria-label="Buka menu">☰</button><div class="breadcrumb"><span>Panel Admin</span><b>/</b><strong id="breadcrumb-title">Dashboard</strong></div><div class="top-actions"><span class="today">Selasa, 15 September 2026</span><button class="notification" type="button" aria-label="Notifikasi">♧<i></i></button><span class="top-avatar">AD</span></div></header>
+
+      <section class="view active" id="dashboard-view" data-section="dashboard">
+        <div class="page-heading"><div><p class="eyebrow"><span></span> Ringkasan pelayanan</p><h1>Selamat datang, <em>Admin.</em></h1><p class="heading-copy">Pantau perkembangan data jemaat dan pelayanan khusus dalam satu tempat.</p></div><button class="primary-action" type="button" data-scroll-to="jemaat">+ Tambah data</button></div>
+        <div class="stats-grid"><article class="stat-card"><div class="stat-icon gold">♧</div><span>Total jemaat</span><strong>248</strong><small><b>+12</b> dari bulan lalu</small></article><article class="stat-card"><div class="stat-icon sage">♙</div><span>Jemaat laki-laki</span><strong>119</strong><small>47,9% dari total</small></article><article class="stat-card"><div class="stat-icon blue">♙</div><span>Jemaat perempuan</span><strong>129</strong><small>52,1% dari total</small></article><article class="stat-card"><div class="stat-icon rose">✦</div><span>Pelayan khusus</span><strong>34</strong><small><b>17</b> penatua & <b>17</b> diaken</small></article></div>
+        <div class="dashboard-grid"><section class="panel demographic-panel"><div class="panel-heading"><div><p class="panel-kicker">Komposisi jemaat</p><h2>Data demografi</h2></div><span class="panel-date">Update hari ini</span></div><div class="demographic-body"><div class="donut-chart"><div class="donut-center"><strong>248</strong><span>Jemaat</span></div></div><div class="legend"><div><span class="legend-dot navy"></span><span>Laki-laki</span><strong>119 <small>47,9%</small></strong></div><div><span class="legend-dot gold"></span><span>Perempuan</span><strong>129 <small>52,1%</small></strong></div></div></div><div class="status-bars"><div><span>Sidi</span><div class="bar"><i style="width:78%"></i></div><strong>193</strong></div><div><span>Baptis</span><div class="bar"><i style="width:91%"></i></div><strong>226</strong></div></div></section><section class="panel activity-panel"><div class="panel-heading"><div><p class="panel-kicker">Aktivitas terakhir</p><h2>Pembaruan data</h2></div><a href="#jemaat" data-scroll-to="jemaat">Lihat semua →</a></div><div class="activity-list"><div><span class="activity-dot"></span><p><strong>Data jemaat diperbarui</strong><small>Kolom 07 · 12 data baru</small></p><time>Hari ini</time></div><div><span class="activity-dot gold-dot"></span><p><strong>Pelayan khusus ditambahkan</strong><small>Kolom 12 · Penatua</small></p><time>Kemarin</time></div><div><span class="activity-dot sage-dot"></span><p><strong>Data keluarga diperiksa</strong><small>Kolom 03 · 8 data diverifikasi</small></p><time>2 hari lalu</time></div></div></section></div>
+        <section class="panel quick-panel"><div class="panel-heading"><div><p class="panel-kicker">Akses cepat</p><h2>Kelola data jemaat</h2></div></div><div class="quick-actions"><button type="button" data-scroll-to="jemaat"><span>♧</span><strong>Rekapitulasi jemaat</strong><small>Lihat data Kolom 1–17</small><b>→</b></button><button type="button" data-scroll-to="pelayan"><span>✦</span><strong>Pelayan khusus</strong><small>Kelola penatua & diaken</small><b>→</b></button></div></section>
+      </section>
+
+      <section class="view" id="jemaat-view" data-section="jemaat"><div class="page-heading compact"><div><p class="eyebrow"><span></span> Database jemaat</p><h1>Data <em>Jemaat</em></h1><p class="heading-copy">Rekapitulasi jemaat berdasarkan wilayah Kolom 1 sampai 17.</p></div><button class="primary-action" type="button" id="export-button">↓ Ekspor CSV</button></div><section class="panel data-panel"><div class="table-toolbar"><div class="search-box"><span>⌕</span><input id="member-search" type="search" placeholder="Cari nama atau nomor keluarga..." aria-label="Cari data jemaat"></div><select id="column-filter" aria-label="Filter kolom"><option value="all">Semua kolom</option></select><span class="result-count" id="member-count">17 wilayah</span></div><div class="table-wrap"><table id="member-table"><thead><tr><th>Nama kepala keluarga</th><th>Kolom</th><th>Anggota</th><th>Laki-laki</th><th>Perempuan</th><th>Sidi</th><th>Baptis</th><th>Status</th></tr></thead><tbody></tbody></table></div></section></section>
+
+      <section class="view" id="pelayan-view" data-section="pelayan"><div class="page-heading compact"><div><p class="eyebrow"><span></span> Struktur pelayanan</p><h1>Pelayan <em>Khusus</em></h1><p class="heading-copy">Daftar penatua, diaken, dan pelayan khusus tiap kolom.</p></div><button class="primary-action" type="button" data-toast="Form tambah pelayan siap dihubungkan ke database.">+ Tambah pelayan</button></div><section class="panel data-panel"><div class="table-toolbar"><div class="search-box"><span>⌕</span><input id="servant-search" type="search" placeholder="Cari nama pelayan..." aria-label="Cari pelayan khusus"></div><select id="role-filter" aria-label="Filter jabatan"><option value="all">Semua jabatan</option><option>Penatua</option><option>Diaken</option></select></div><div class="table-wrap"><table id="servant-table"><thead><tr><th>Nama pelayan</th><th>Jabatan</th><th>Kolom</th><th>Wilayah pelayanan</th><th>Status</th></tr></thead><tbody><tr><td><span class="table-person">ML</span>Marthen Lumenta</td><td><span class="role-badge elder">Penatua</span></td><td>Kolom 01</td><td>Wulauan Utara</td><td><span class="status active-status">Aktif</span></td></tr><tr><td><span class="table-person">RS</span>Ruth Sondakh</td><td><span class="role-badge deacon">Diaken</span></td><td>Kolom 03</td><td>Wulauan Tengah</td><td><span class="status active-status">Aktif</span></td></tr><tr><td><span class="table-person">YF</span>Yohanis F. Runtuwene</td><td><span class="role-badge elder">Penatua</span></td><td>Kolom 07</td><td>Wulauan Selatan</td><td><span class="status active-status">Aktif</span></td></tr><tr><td><span class="table-person">SM</span>Sarah Moniaga</td><td><span class="role-badge deacon">Diaken</span></td><td>Kolom 12</td><td>Wulauan Timur</td><td><span class="status active-status">Aktif</span></td></tr></tbody></table></div></section></section>
+
+      <section class="view" id="pengaturan-view" data-section="pengaturan"><div class="page-heading compact"><div><p class="eyebrow"><span></span> Preferensi sistem</p><h1>Pengaturan <em>Admin</em></h1><p class="heading-copy">Kelola preferensi dasar panel informasi jemaat.</p></div></div><section class="panel settings-panel"><label>Nama instansi<input type="text" value="GMIM Ebenhæzer Wulauan"></label><label>Email notifikasi<input type="email" value="halo@gmimebenhazer.id"></label><button class="primary-action" type="button" data-toast="Pengaturan tersimpan pada tampilan demo.">Simpan perubahan</button></section></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>
