@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servantRows = Array.from(document.querySelectorAll('#servant-table tbody tr'));
   const renderServants = () => { const query = servantSearch.value.toLowerCase(); const role = roleFilter.value; servantRows.forEach((row) => { row.hidden = !row.textContent.toLowerCase().includes(query) || (role !== 'all' && !row.textContent.includes(role)); }); };
   servantSearch.addEventListener('input', renderServants); roleFilter.addEventListener('change', renderServants);
+
   const toast = document.querySelector('#toast');
   document.querySelectorAll('[data-toast]').forEach((button) => button.addEventListener('click', () => { toast.textContent = button.dataset.toast; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2600); }));
   document.querySelector('#export-button').addEventListener('click', () => { const csv = ['Kepala Keluarga,Kolom,Anggota,Laki-laki,Perempuan,Sidi,Baptis,Status', ...members.map((member) => member.join(','))].join('\n'); const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'rekap-jemaat-kolom-1-17.csv'; link.click(); URL.revokeObjectURL(link.href); });
