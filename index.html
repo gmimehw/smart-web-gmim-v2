@@ -99,20 +99,21 @@
           <div><p class="eyebrow dark"><span></span> Periode pelayanan 2027–2031</p><h2>BMJ &amp; <em>Pelayanan Kategorial</em></h2></div>
           <p class="leadership-intro">Kenali para pengurus yang melayani jemaat dalam persekutuan, pembinaan, dan kepedulian lintas generasi.</p>
         </div>
-        <div class="leadership-toolbar">
-          <label for="leadership-group">Pilih kelompok pelayanan</label>
-          <select id="leadership-group">
-            <option value="BMJ">Badan Majelis Jemaat (BMJ Inti)</option>
-            <option value="P/KB">Pria / Kaum Bapa (P/KB)</option>
-            <option value="W/KI">Wanita / Kaum Ibu (W/KI)</option>
-            <option value="Pemuda">Komisi Pemuda</option>
-            <option value="Remaja">Komisi Remaja</option>
-            <option value="ASM">Anak Sekolah Minggu (ASM)</option>
-            <option value="Lansia">Komisi Lansia</option>
-          </select>
-          <span class="leadership-period">2027–2031</span>
+        <div class="leadership-layout">
+          <nav class="leadership-groups" aria-label="Pilih kelompok pelayanan">
+            <button type="button" data-leadership-group="BMJ" aria-pressed="true">BMJ Inti</button>
+            <button type="button" data-leadership-group="P/KB" aria-pressed="false">Pria / Kaum Bapa</button>
+            <button type="button" data-leadership-group="W/KI" aria-pressed="false">Wanita / Kaum Ibu</button>
+            <button type="button" data-leadership-group="Pemuda" aria-pressed="false">Komisi Pemuda</button>
+            <button type="button" data-leadership-group="Remaja" aria-pressed="false">Komisi Remaja</button>
+            <button type="button" data-leadership-group="ASM" aria-pressed="false">Anak Sekolah Minggu</button>
+            <button type="button" data-leadership-group="Lansia" aria-pressed="false">Komisi Lansia</button>
+          </nav>
+          <div class="leadership-content">
+            <p class="leadership-period"><strong>Periode</strong> 2027–2031</p>
+            <div class="leadership-roster" id="leadership-roster" aria-live="polite"></div>
+          </div>
         </div>
-        <div class="leadership-roster" id="leadership-roster" aria-live="polite"></div>
       </div>
     </section>
 
